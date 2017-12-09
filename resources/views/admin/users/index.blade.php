@@ -1,7 +1,13 @@
 @extends('layouts.admin')
 
 @section('content')
+
+    @if(Session::has('user_deleted'))
+        <p class="alert alert-success"><strong>Success!</strong> {{ session('user_deleted') }}</p>
+    @endif
+    
     <h1>Users</h1>
+    
     <table class="table table-striped">
     <thead>
       <tr>
