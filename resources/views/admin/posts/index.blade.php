@@ -30,7 +30,7 @@
                     <td><img width="50px" src="{{ $post->photo ? $post->photo->file : "/images/place_holder.jpg" }}" alt=""></td>
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->body }}</td>
-                    <td>{{ $post->category_id ? $post->category_id : "Post has no category" }}</td>
+                    <td>{{ $post->category ? $post->category->name : "No category" }}</td>
                     <td>{{ $post->user ? $post->user->name : "Post has no user" }}</td>
                     <td>{{ $post->created_at->diffForHumans() }}</td>
                     <td>{{ $post->updated_at->diffForHumans() }}</td>
